@@ -3,7 +3,7 @@ require 'spec_helper'
 # Define installed packages
 Packages = {
   'elasticsearch' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
 }
 
