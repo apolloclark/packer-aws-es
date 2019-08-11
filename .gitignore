@@ -1,5 +1,6 @@
 .project
 .vagrant
+.gradle
 .rspec
 manifest.json
 manifest.json.lock
