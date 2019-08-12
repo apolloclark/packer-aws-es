@@ -14,7 +14,6 @@ describe "Dockerfile" do
 
     # check for package version major usage
     if package_version.match(/(\d+).x/)
-        puts "[INFO] regex match found"
         package_version = package_version.match(/(\d+).x/)[1]
     end
 
@@ -41,22 +40,31 @@ describe "Dockerfile" do
 
 
 
-  it "installs the right version of Centos" do
+  it "runs the right version of RHEL" do
     expect(os_version).to include("Red Hat")
-    expect(os_version).to include("7.6")
+    expect(os_version).to include("release 7")
   end
 
-  it "runs as root user" do
-    expect(sys_user).to eql("root")
+  it "runs as service user" do
+    package_name = ENV['PACKAGE_NAME']
+    expect(sys_user).to eql(package_name)
   end
 
 
 
-  describe command("python --version") do
+  describe package("elasticsearch") do
+    package_version = ENV['PACKAGE_VERSION']
+    it { should be_installed.with_version(package_version) }
+  end
+
+  describe command("java --version 2>&1") do
     its(:exit_status) { should eq 0 }
+    its(:stdout) { should match(/11(.*)/) }
   end
 
-  describe command("pip --version") do
+  describe command("/usr/share/elasticsearch/bin/elasticsearch --version") do
+    package_version = ENV['PACKAGE_VERSION']
+    its(:stdout) { should match("Version: #{package_version}") }
     its(:exit_status) { should eq 0 }
   end
 end

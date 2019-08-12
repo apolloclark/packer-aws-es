@@ -1,7 +1,3 @@
 # http://docs.ansible.com/ansible/latest/galaxy.html#installing-multiple-roles-from-a-file
 ---
-- src: geerlingguy.firewall
 - src: apolloclark.elasticsearch      # https://github.com/apolloclark/ansible-role-elasticsearch
-- src: https://github.com/apolloclark/java_role
-  version: develop
-  name: java_role

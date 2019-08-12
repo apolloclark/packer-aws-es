@@ -11,7 +11,7 @@ rootProject.name = 'packer-es'
 include ':gradle-build:rhel8',
     ':gradle-build:rhel7',
     ':gradle-build:centos7',
-//    ':gradle-build:amzlinux2',
+    ':gradle-build:amzlinux2',
     ':gradle-build:ubuntu18.04',
     ':gradle-build:ubuntu16.04',
     ':gradle-build:debian10',

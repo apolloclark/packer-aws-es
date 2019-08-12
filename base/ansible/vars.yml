@@ -26,4 +26,5 @@ elasticsearch:
   install_only: true
   skip_restart: true
   skip_start: true
+  set_ulimits: false
   install_plugins: []

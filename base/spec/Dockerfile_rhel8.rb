@@ -25,7 +25,7 @@ describe "Dockerfile" do
     # https://docs.docker.com/engine/api/v1.24/#31-containers
     # https://github.com/swipely/docker-api
     # https://serverspec.org/resource_types.html
-    set :os, family: :debian
+    set :os, family: :redhat
     set :backend, :docker
     set :docker_image, image.id
   end
@@ -40,9 +40,9 @@ describe "Dockerfile" do
 
 
 
-  it "runs the right version of Ubuntu" do
-    expect(os_version).to include("Ubuntu")
-    expect(os_version).to include("18.04")
+  it "runs the right version of RHEL" do
+    expect(os_version).to include("Red Hat")
+    expect(os_version).to include("release 8")
   end
 
   it "runs as service user" do

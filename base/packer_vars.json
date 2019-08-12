@@ -1,0 +1,3 @@
+{
+    "docker_changes":  "WORKDIR /usr/share/elasticsearch,USER elasticsearch,ENTRYPOINT [\"/usr/local/bin/docker-entrypoint\"],CMD [\"eswrapper\"],ENV PATH=/usr/share/elasticsearch/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin,ENV LANG=C.UTF-8,ENV JAVA_HOME=/usr/local/openjdk-11,ENV JAVA_VERSION=11.0.4,ENV JAVA_URL_VERSION=11.0.4_11"
+}

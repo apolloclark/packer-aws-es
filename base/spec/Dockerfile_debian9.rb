@@ -40,9 +40,9 @@ describe "Dockerfile" do
 
 
 
-  it "runs the right version of Ubuntu" do
-    expect(os_version).to include("Ubuntu")
-    expect(os_version).to include("18.04")
+  it "runs the right version of Debian" do
+    expect(os_version).to include("Debian")
+    expect(os_version).to include("GNU/Linux 9")
   end
 
   it "runs as service user" do
