@@ -56,10 +56,10 @@ gradle rhel7:test     --project-dir gradle-build --rerun-tasks
 gradle centos7:test   --project-dir gradle-build --rerun-tasks
 gradle amzlinux2:test   --project-dir gradle-build --rerun-tasks
 
-gradle test --parallel --project-dir gradle-build
+gradle test --parallel --max-workers 4 --project-dir gradle-build
 
 # Gradle, publish images
-gradle push --parallel --project-dir gradle-build
+gradle push --parallel --max-workers 4 --project-dir gradle-build
 
 # Gradle, list tasks, and dependency graph
 gradle tasks --project-dir gradle-build
