@@ -20,8 +20,8 @@ To use this project, you must have installed:
 
 ## Install
 ```shell
-git clone --recurse-submodules https://github.com/apolloclark/packer-openjdk
-cd ./packer-openjdk
+git clone --recurse-submodules https://github.com/apolloclark/packer-es
+cd ./packer-es
 
 # update submodules
 git submodule update --recursive --remote
